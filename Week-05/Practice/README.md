@@ -17,3 +17,14 @@
 - Methods and method overloading
 - Constructors and encapsulation
 - `Comparable` and `Arrays.sort()`
+
+## How to Run
+
+From the project root, compile and run a practice problem using:
+
+```powershell
+javac Week-05\Practice\Practice1.java
+java -cp Week-05\Practice Practice1
+```
+
+Replace `Practice1` with `Practice2`, `Practice3`, `Practice4`, or `Practice5` to run another problem.
