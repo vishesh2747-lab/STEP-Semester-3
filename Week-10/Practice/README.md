@@ -1,14 +1,35 @@
-# Week-10 Practice
+# STEP Semester 3 — Week 10 Practice
 
-## Part A: Programming Problems
+This folder contains Java practice solutions and question answers for Week 10.
 
-1. **Vowel and Consonant Counter** – Count vowels and consonants in a word.
-2. **Word Reverser and Palindrome Checker** – Reverse a word and check whether it is a palindrome.
-3. **Even and Odd Counter** – Count even and odd numbers in an array.
-4. **Array Reversal** – Reverse an array in place.
-5. **Digit Sum and Number Reversal** – Calculate the sum of digits and reverse a number.
+## Part A — Coding Problems
 
-## Part B: MCQ Answers
+### Practice 1: Vowel and Consonant Counter
+Count the vowels and consonants in a word.
+
+**File:** `Practice1.java`
+
+### Practice 2: Word Reverser and Palindrome Checker
+Reverse a word and check whether it is a palindrome.
+
+**File:** `Practice2.java`
+
+### Practice 3: Even and Odd Numbers in a List
+Count the even and odd numbers in a list.
+
+**File:** `Practice3.java`
+
+### Practice 4: In-Place Array Reversal
+Reverse an array without creating a second array.
+
+**File:** `Practice4.java`
+
+### Practice 5: Digit Sum and Number Reversal
+Calculate the sum of the digits and reverse a number.
+
+**File:** `Practice5.java`
+
+## Part B — MCQ Answers
 
 1. D
 2. B
@@ -31,76 +52,68 @@
 19. C
 20. C
 
-## Part C: Conceptual Questions and Answers
+## Part C — Conceptual Questions with Answers
 
-### 1. What is String immutability? Why is StringBuilder preferred for repeated modifications?
+### Question 1: String Immutability
 
-Strings in Java are immutable, meaning their values cannot be changed after creation. StringBuilder is preferred for repeated modifications because it can modify the same object without creating a new String object each time.
+String objects cannot be modified after creation. Repeated String modifications can create temporary objects and increase memory usage. `StringBuilder` reduces this overhead because it allows modification of a mutable character sequence.
 
-### 2. What is the use of the `this` keyword?
+### Question 2: The `this` Keyword
 
-The `this` keyword refers to the current object. It is used to distinguish instance variables from parameters with the same name.
+The `this` keyword refers to the current object and distinguishes an instance variable from a parameter with the same name.
 
-Example:
 ```java
-this.name = name;
+Student(String name) {
+    this.name = name;
+}
 ```
 
-### 3. What is the difference between an object and a reference?
+Here, `this.name` is the instance variable, while `name` is the constructor parameter.
 
-An object is an instance of a class stored in memory. A reference stores the information needed to access that object. Multiple references can point to the same object.
+### Question 3: Objects and Reference Variables
 
-### 4. What is the difference between static and instance variables?
+An object is an instance of a class, while a reference variable refers to an object. Assigning one reference variable to another makes both refer to the same object. Changes made through either reference affect that object.
 
-A static variable belongs to the class and is shared by all objects. An instance variable belongs to an individual object, so each object has its own copy.
+### Question 4: Static and Instance Variables
 
-### 5. Differentiate between for, while, and do-while loops.
+A static variable belongs to the class and is shared by all objects. An instance variable belongs to an individual object. A shared visitor count is suitable as a static variable, while a student's name is an instance variable.
 
-- **for:** Commonly used when the number of iterations is known.
-- **while:** Checks the condition before each iteration.
-- **do-while:** Executes the body at least once before checking the condition.
+### Question 5: `for`, `while`, and `do-while` Loops
 
-### 6. Explain pass-by-value in Java.
+A `for` loop is useful when the number of iterations is known. A `while` loop is useful when repetition depends on a condition. A `do-while` loop executes at least once because its condition is checked after the body.
 
-Java always uses pass-by-value. For primitive types, a copy of the value is passed. For objects, a copy of the reference is passed, allowing changes to the object's state but not reassignment of the caller's reference.
+### Question 6: Pass-by-Value in Java
 
-### 7. Why does integer division remove the fractional part?
+Java always passes arguments by value. For primitive types, a copy of the value is passed. For object references, a copy of the reference is passed, allowing the method to modify the referenced object's state but not reassign the caller's reference.
 
-When two integers are divided, Java discards the fractional part of the result.
+### Question 7: Integer Division and Type Casting
 
-Example:
-```java
-System.out.println(5 / 2);         // 2
-System.out.println((double) 5 / 2); // 2.5
-```
+Integer division discards the fractional part. For example, `5 / 2` produces `2`. Using `(double) 5 / 2` produces `2.5`. Casting after integer division does not restore the discarded fraction.
 
-Casting before division preserves the fractional part.
+### Question 8: Encapsulation
 
-### 8. What is encapsulation?
+Encapsulation protects data by restricting direct access to an object's internal fields. Private fields and public getters and setters provide controlled access. Setters can validate values before updating data.
 
-Encapsulation combines data and methods in a class and restricts direct access to data using access modifiers such as `private`. Getters and setters can provide controlled access.
+### Question 9: `==` Versus `equals()`
 
-### 9. Differentiate between `==` and `equals()`.
+For object references, `==` checks whether two references point to the same object. `equals()` checks logical equality according to its implementation. Two different String objects containing `"Java"` can be unequal using `==` but equal using `equals()`.
 
-- `==` compares primitive values or checks whether object references point to the same object.
-- `equals()` checks logical equality when the class implements an appropriate version of the method.
+### Question 10: Method Overloading and Overriding
 
-### 10. Differentiate between method overloading and method overriding.
-
-- **Overloading:** Multiple methods have the same name but different parameter lists. It is resolved at compile time.
-- **Overriding:** A subclass provides its own implementation of an inherited method. The selected implementation depends on the object's runtime type.
+Method overloading defines methods with the same name but different parameter lists and is resolved at compile time. Method overriding provides a subclass-specific implementation of an inherited method and uses runtime polymorphism to select the implementation based on the actual object.
 
 ## Language
-
 Java
 
-## Compile and Run
+## How to Compile and Run
 
-From the Week-10 folder in PowerShell:
+Run commands from the `Week-10` parent folder in PowerShell.
+
+Example:
 
 ```powershell
 javac Practice\Practice1.java
 java -cp Practice Practice1
 ```
 
-Replace `Practice1` with the program name you want to run.
+Replace `Practice1` with `Practice2`, `Practice3`, `Practice4`, or `Practice5` to run another solution.
