@@ -20,7 +20,7 @@
 
 ## How to Run
 
-From the repository root, compile and run a problem using:
+Compile and run a problem from the project root using:
 
 ```powershell
 javac Week-05\Problem1.java
