@@ -1,37 +1,51 @@
-# Week-10: Java Assignments and Practice
+# STEP Semester 3 — Week 10 Assignment
 
-This folder contains the Java assignment problems and practice programs completed during Week 10 of STEP Semester 3.
+This folder contains the Java solutions for all five Week 10 coding assignment problems.
 
-## Contents
+## Problems
 
-### Assignments
-- **Problem 1:** Busiest Bus Row
-- **Problem 2:** Class Attendance Tracker
-- **Problem 3:** Duty Roster Rotation
-- **Problem 4:** Exam Score Band Counter
-- **Problem 5:** Second-Best Score
+### Problem 1: Busiest Bus Row
+Find the row with the largest total in a 2D grid. If multiple rows have the same total, choose the row with the smaller index.
 
-### Practice
-- Java programming practice problems
-- Multiple-choice questions (MCQs)
-- Conceptual questions and answers
+**File:** `Problem1.java`
+
+### Problem 2: Class Attendance Tracker
+Count the total number of present days and find the longest consecutive attendance streak.
+
+**File:** `Problem2.java`
+
+### Problem 3: Duty Roster Rotation
+Rotate a list of names to the right by `k` positions, handling values of `k` larger than the list size.
+
+**File:** `Problem3.java`
+
+### Problem 4: Exam Score Band Counter
+Count the number of scores within an inclusive range using binary search.
+
+**File:** `Problem4.java`
+
+### Problem 5: Second-Best Score
+Find the second-highest distinct score without sorting the array. Return `-1` if no second-highest distinct score exists.
+
+**File:** `Problem5.java`
 
 ## Language
 Java
 
 ## How to Compile and Run
 
-Compile a Java file:
+Open the terminal in this folder and compile the required file:
 
-```bash
+```powershell
 javac Problem1.java
-```
-
-Run the compiled program:
-
-```bash
 java Problem1
 ```
 
-Replace `Problem1` with the name of the Java class you want to run.
+Replace `Problem1` with `Problem2`, `Problem3`, `Problem4`, or `Problem5` to run another solution.
 
+## Concepts Practiced
+- Two-dimensional arrays and nested loops
+- Arrays and single-pass calculations
+- Array rotation and modulo
+- Binary search
+- Time and space complexity
