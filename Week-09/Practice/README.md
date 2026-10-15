@@ -1,37 +1,18 @@
-# STEP Semester 3 — Week 09 Practice
-
-This folder contains five Java practice programs and the MCQs and conceptual questions for Week 09.
+# Week 09 — Practice
 
 ## Part A: Coding Problems
 
-| File | Problem Name | Concepts Used |
-|---|---|---|
-| Practice1.java | Garden Plot Area Report | Abstraction, Inheritance, Method Overriding |
-| Practice2.java | Weekly Staff Pay | Abstract Classes, Inheritance, Overtime Calculation |
-| Practice3.java | Library Late Fine Counter | Abstraction, Inheritance, Fine Calculation |
-| Practice4.java | Electricity Connection Billing | Abstract Classes, Method Overriding, Billing |
-| Practice5.java | Travel Booking with a Common Fee | Abstraction, Inheritance, Common Fee Calculation |
+This folder contains five Java programs demonstrating abstraction, abstract classes, inheritance, and method overriding.
 
-### Problem 1: Garden Plot Area Report
-Calculates the area of circular, rectangular, and triangular plots and displays the total area.
+| File | Problem |
+|---|---|
+| Practice1.java | Garden Plot Area Report |
+| Practice2.java | Weekly Staff Pay |
+| Practice3.java | Library Late Fine Counter |
+| Practice4.java | Electricity Connection Billing |
+| Practice5.java | Travel Booking with a Common Fee |
 
-- Circle: π × radius × radius
-- Rectangle: length × width
-- Triangle: 0.5 × base × height
-
-### Problem 2: Weekly Staff Pay
-Calculates weekly pay for full-time staff, hourly staff, and interns. Hourly staff receive 1.5 times their normal rate for hours exceeding 40.
-
-### Problem 3: Library Late Fine Counter
-Calculates late fines for books, DVDs, and magazines. DVD fines are capped at 50.
-
-### Problem 4: Electricity Connection Billing
-Calculates electricity bills for HOME, SHOP, and FACTORY connections using their respective billing rules.
-
-### Problem 5: Travel Booking with a Common Fee
-Calculates bus, train, and flight fares. Every booking includes a common booking fee of 50.
-
-## Part B: Quiz — MCQs with Correct Answers
+## Part B: Quiz — MCQs with Answers
 
 ### Q1. Which of the following best describes abstraction in object-oriented programming?
 
@@ -124,13 +105,16 @@ In Java, abstraction can be achieved using abstract classes and interfaces.
 
 **Answer:**
 
-Abstraction hides implementation details and exposes essential functionality. Encapsulation combines data and methods within a class and restricts direct access to data using access modifiers such as `private`.
+Abstraction and encapsulation are two important OOP concepts, but they serve different purposes.
+
+- **Abstraction** hides implementation details and exposes essential functionality.
+- **Encapsulation** combines data and methods within a class and restricts direct access to data using access modifiers such as `private`.
 
 **Example: Bank Account**
 
 A `BankAccount` class can provide a `withdraw()` method to demonstrate abstraction. The account balance can be declared `private` to demonstrate encapsulation.
 
-Together, these concepts simplify how the account is used while protecting its internal data.
+Together, they simplify how the account is used while protecting its internal data.
 
 ### Q3. An abstract class cannot be instantiated, yet it can define a constructor. Explain why and when this constructor executes.
 
@@ -138,13 +122,36 @@ Together, these concepts simplify how the account is used while protecting its i
 
 An abstract class can have a constructor because it may contain common data and initialization logic required by its subclasses.
 
-Although an abstract class cannot be instantiated directly, its constructor executes when an object of a concrete subclass is created. The subclass constructor invokes the parent constructor using `super()`; when omitted, Java inserts an appropriate no-argument superclass constructor call when possible.
+Although an abstract class cannot be instantiated directly, its constructor executes when an object of a concrete subclass is created. The subclass constructor invokes the parent constructor using `super()`; if omitted, Java inserts an appropriate no-argument superclass constructor call when possible.
+
+**Example:**
+
+```java
+abstract class Animal {
+    Animal() {
+        System.out.println("Animal constructor");
+    }
+}
+
+class Dog extends Animal {
+    Dog() {
+        System.out.println("Dog constructor");
+    }
+}
+```
+
+When `new Dog()` is executed, the output is:
+
+```text
+Animal constructor
+Dog constructor
+```
 
 ### Q4. Explain why an abstract method cannot be declared with `private`, `static`, or `final`.
 
 **Answer:**
 
-An abstract method declares behavior that must be implemented by a subclass.
+An abstract method declares behavior that must be implemented by a subclass. The following modifiers conflict with this purpose:
 
 - **private:** A private method is not accessible to subclasses for overriding.
 - **static:** A static method belongs to the class and is not overridden through instance-based polymorphism.
@@ -156,25 +163,21 @@ Therefore, Java does not allow an abstract method to use these modifiers.
 
 **Answer:**
 
-The diamond problem occurs when a class inherits from two parent classes that share a common ancestor. If both parents provide the same method or inherited state, it may be ambiguous which implementation or state the child should use.
+The **diamond problem** occurs when a class inherits from two parent classes that share a common ancestor. If both parents provide the same method or inherited state, it may be ambiguous which implementation or state the child should use.
 
 Java avoids this ambiguity by allowing a class to extend only one class, rather than multiple classes.
 
 Java still allows a class to implement multiple interfaces. If two interfaces provide conflicting default implementations of the same method, the implementing class must resolve the conflict by overriding the method or following the applicable interface inheritance rules.
 
-## Concepts Practiced
+---
+
+## Concepts Covered
 
 - Abstraction
 - Abstract classes and methods
-- Inheritance
-- Method overriding
 - Interfaces
 - Constructors in abstract classes
+- Method overriding
 - Encapsulation
-- Runtime polymorphism
+- Multiple interface implementation
 - The diamond problem
-- Conditional logic and calculations
-
-**Language:** Java
-
-**Course:** STEP Semester 3
